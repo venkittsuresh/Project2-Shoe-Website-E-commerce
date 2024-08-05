@@ -1,6 +1,19 @@
+/* Navbar.css */
 
-.navbar {
+@keyframes slideDown {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .navbar {
     background-color: #ffffff !important;
+    animation: slideDown 0.5s ease-out; /* Adjust duration and easing as needed */
   }
   
   .menu-button {
@@ -9,18 +22,23 @@
   
   .menu-item {
     color: #a6a1a1 !important;
-    transition: background-color 0.3s ease, color 0.3s ease; 
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
   
-  .nav-button:hover {
-    color: rgb(0, 0, 0) !important; 
-    background-color:transparent !important;
-    scale: 1.1;
- 
+  .menu-item:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Light gray background on hover */
+    color: rgb(0, 0, 0); /* Color of text on hover */
   }
   
   .nav-button {
     color: rgba(81, 81, 81, 0.873) !important;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and scale */
+  }
+  
+  .nav-button:hover {
+    color: rgb(0, 0, 0) !important;
+    background-color: transparent !important;
+    transform: scale(1.1); /* Scaling effect on hover */
   }
   
   .logo {
@@ -43,7 +61,7 @@
   }
   
   .search .MuiInputBase-input {
-    color: rgb(0, 0, 0) !important; 
+    color: rgb(0, 0, 0) !important;
   }
   
   .search .MuiSvgIcon-root {
@@ -51,6 +69,6 @@
   }
   
   .icon-button {
-    color: rgb(0, 0, 0) !important; 
+    color: rgb(0, 0, 0) !important;
   }
   

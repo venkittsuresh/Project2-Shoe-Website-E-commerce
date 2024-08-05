@@ -19,7 +19,7 @@ import Grid from '@mui/material/Grid';
 import logo from '../../../assets/Logo/WolfPaw.png';
 import './Navbar.css';
 
-const pages = ['HOME', 'SHOP', 'MEN', 'WOMEN', 'KIDS','ABOUT'];
+const pages = ['HOME', 'SHOP', 'MEN', 'WOMEN', 'KIDS', 'ABOUT'];
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
