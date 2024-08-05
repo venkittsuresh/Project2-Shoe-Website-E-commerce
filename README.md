@@ -6,6 +6,7 @@ A sleek, modern e-commerce platform for browsing, buying, and reviewing shoes.
 User Stories
 
 General User
+
 Browse Anonymously: Explore products without creating an account
 
 Customer 
@@ -35,6 +36,7 @@ Rating system and text box for comments.
 Reviews displayed on product pages.
 
 Seller/Admin
+
 Adding New Products
 Admin dashboard for adding products.
 Product details: name, description, images, price, sizes, colors, stock.
@@ -44,14 +46,21 @@ Managing Website Content
 Update homepage banners, promos, and static content.
 
 Technologies Used
+
 Frontend: HTML, CSS, React js, Tailwind CSS
+
 Backend: Springboot
+
 Database: MySql
 
 Setup and Installation
+
 Clone the repository.
+
 Install dependencies: npm install
+
 Start the server: npm start
 
 Contributing
+
 Feel free to fork the repository and submit pull requests.
