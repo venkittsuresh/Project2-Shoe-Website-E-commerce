@@ -8,7 +8,8 @@ User Stories
 General User
 Browse Anonymously: Explore products without creating an account
 
-Customer
+Customer 
+
 Browsing the Website
 Featured shoes on the homepage.
 Categories and filters (type, size, color, price).
