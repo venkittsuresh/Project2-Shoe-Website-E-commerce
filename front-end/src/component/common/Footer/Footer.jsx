@@ -68,7 +68,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="container mx-auto mt-8 flex flex-col md:flex-row justify-between items-center border-t border-gray-700 pt-4">
+      <div className="container mx-auto mt-8 flex flex-col md:flex-row justify-center items-center border-t border-gray-700 pt-4">
         <p > All Right Reserved © 2024 WolfWalk</p>
       </div>
     </footer>
