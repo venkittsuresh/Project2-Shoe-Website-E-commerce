@@ -5,10 +5,10 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
-import MenuItem from '@mui/material/MenuItem';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import FavoriteIcon from '@mui/icons-material/Favorite';
@@ -17,9 +17,17 @@ import InputBase from '@mui/material/InputBase';
 import { alpha, styled } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
 import logo from '../../../assets/Logo/WolfPaw.png';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 
-const pages = ['HOME', 'SHOP', 'MEN', 'WOMEN', 'KIDS', 'ABOUT'];
+const pages = [
+  { name: 'HOME', path: '/' },
+  { name: 'SHOP', path: '/shop' },
+  { name: 'MEN', path: '/men' },
+  { name: 'WOMEN', path: '/women' },
+  { name: 'KIDS', path: '/kids' },
+  { name: 'ABOUT', path: '/about' },
+];
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -62,6 +70,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [activePage, setActivePage] = React.useState('/');
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -71,8 +80,13 @@ function Navbar() {
     setAnchorElNav(null);
   };
 
+  const handlePageClick = (path) => {
+    setActivePage(path);
+    handleCloseNavMenu();
+  };
+
   return (
-    <AppBar position="static" className="navbar">
+    <AppBar position="sticky" className="navbar">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -106,8 +120,14 @@ function Navbar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu} className="menu-item">
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem key={page.name} onClick={() => handlePageClick(page.path)} className="menu-item">
+                  <Link
+                    to={page.path}
+                    className={`nav-link ${activePage === page.path ? 'active-link' : ''}`}
+                    onClick={() => handlePageClick(page.path)}
+                  >
+                    <Typography textAlign="center">{page.name}</Typography>
+                  </Link>
                 </MenuItem>
               ))}
             </Menu>
@@ -116,11 +136,13 @@ function Navbar() {
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                className="nav-button"
+                key={page.name}
+                component={Link}
+                to={page.path}
+                className={`nav-button ${activePage === page.path ? 'active-nav-button' : ''}`}
+                onClick={() => handlePageClick(page.path)}
               >
-                {page}
+                {page.name}
               </Button>
             ))}
           </Box>
