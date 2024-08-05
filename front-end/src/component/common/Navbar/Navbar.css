@@ -1,0 +1,56 @@
+
+.navbar {
+    background-color: #ffffff !important;
+  }
+  
+  .menu-button {
+    color: rgb(0, 0, 0) !important;
+  }
+  
+  .menu-item {
+    color: #a6a1a1 !important;
+    transition: background-color 0.3s ease, color 0.3s ease; 
+  }
+  
+  .nav-button:hover {
+    color: rgb(0, 0, 0) !important; 
+    background-color:transparent !important;
+    scale: 1.1;
+ 
+  }
+  
+  .nav-button {
+    color: rgba(81, 81, 81, 0.873) !important;
+  }
+  
+  .logo {
+    height: 50px !important;
+  }
+  
+  .navbar-text {
+    color: rgb(2, 2, 2) !important;
+    font-weight: bold !important;
+    margin-left: 10px !important;
+    font-family: "Freckle Face", system-ui !important;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .search {
+    margin-left: auto !important;
+    border: #000 solid 1px;
+    border-radius: 30px;
+  }
+  
+  .search .MuiInputBase-input {
+    color: rgb(0, 0, 0) !important; 
+  }
+  
+  .search .MuiSvgIcon-root {
+    color: rgb(0, 0, 0) !important;
+  }
+  
+  .icon-button {
+    color: rgb(0, 0, 0) !important; 
+  }
+  
