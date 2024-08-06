@@ -1,0 +1,73 @@
+/* Navbar.css */
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.navbar {
+  background-color: #ffffff !important;
+  animation: slideDown 0.5s ease-out; /* Adjust duration and easing as needed */
+}
+
+.menu-button {
+  color: rgb(0, 0, 0) !important;
+}
+
+.menu-item {
+  color: #a6a1a1 !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu-item:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Light gray background on hover */
+  color: rgb(0, 0, 0); /* Color of text on hover */
+}
+
+.nav-button {
+  color: rgba(81, 81, 81, 0.873) !important;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and scale */
+}
+
+.nav-button:hover {
+  color: rgb(0, 0, 0) !important;
+  background-color: transparent !important;
+  transform: scale(1.1); /* Scaling effect on hover */
+}
+
+.logo {
+  height: 50px !important;
+}
+
+.navbar-text {
+  color: rgb(2, 2, 2) !important;
+  font-weight: bold !important;
+  margin-left: 10px !important;
+  font-family: "Freckle Face", system-ui !important;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.search {
+  margin-left: auto !important;
+  border: #000 solid 1px;
+  border-radius: 30px;
+}
+
+.search .MuiInputBase-input {
+  color: rgb(0, 0, 0) !important;
+}
+
+.search .MuiSvgIcon-root {
+  color: rgb(0, 0, 0) !important;
+}
+
+.icon-button {
+  color: rgb(0, 0, 0) !important;
+}
