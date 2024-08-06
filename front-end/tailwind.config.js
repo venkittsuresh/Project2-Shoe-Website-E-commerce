@@ -6,10 +6,13 @@ module.exports = {
     extend: {
       fontFamily: {
         ceviche: ['Ceviche One', 'system-ui'],
-        Freckle: ['Freckle Face', 'system-ui'],
-        Zilla: ['Zilla Slab Highlight', 'serif'],
-
-
+        freckle: ['Freckle Face', 'system-ui'],
+        zilla: ['Zilla Slab Highlight', 'serif'],
+      },
+      backgroundImage: {
+        'mens-category': "url('/src/assets/images/men1.jpg')",
+        'womens-category': "url('/src/assets/images/women.jpg')",
+        'kids-category': "url('/src/assets/images/kid1.jpg')",
       },
     },
   },

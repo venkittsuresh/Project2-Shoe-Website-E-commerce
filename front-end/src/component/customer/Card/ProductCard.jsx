@@ -30,27 +30,19 @@ const ProductCard = ({ product }) => {
         <p className="text-lg font-mono mb-2">$ {product.price}</p>
         <div className="flex items-center mb-4">
           <label className="text-gray-500 mr-2">Color:</label>
-          <select
-            className="border border-gray-300 rounded px-2 py-1"
-            value={selectedColor}
-            onChange={(e) => setSelectedColor(e.target.value)}
-          >
-            {product.colorOptions.map((color, index) => (
-              <option key={index} value={color}>
-                {color}
-              </option>
-            ))}
-          </select>
+          <p className="border border-gray-300 rounded px-2 py-1">{product.color}</p>
         </div>
       </div>
-      
+
       <button className="bg-yellow-500 text-black rounded-lg px-4 py-2 w-full transform transition-transform duration-300 hover:scale-105 mb-4">
         Add to Cart <i className="fas fa-shopping-bag"></i>
       </button>
-      
+
       <div className="flex items-end justify-end gap-4 w-full">
         <i
-          className={`text-lg fas fa-heart ${isFavorite ?  ' text-red-500' : 'text-gray-500'} hover:text-red-500 cursor-pointer active:text-red-500 transition-colors duration-300`}
+          className={`text-lg fas fa-heart ${
+            isFavorite ? " text-red-500" : "text-gray-500"
+          } hover:text-red-500 cursor-pointer active:text-red-500 transition-colors duration-300`}
           onClick={toggleFavorite}
         ></i>
         <i className="text-lg fas fa-eye text-gray-500 hover:text-green-500 cursor-pointer"></i>

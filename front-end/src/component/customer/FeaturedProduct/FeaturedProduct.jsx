@@ -11,29 +11,25 @@ const products = [
     name: "Roshe G Next Nature",
     imageUrl: p1,
     price: "50.00",
-    colorOptions: ["Black", "Green", "Yellow"],
-    color: "Black"
+    color: "Gold"
   },
   {
     name: "Renew Elevate 3",
     imageUrl: p2,
     price: "85.00",
-    colorOptions: ["Green", "Green", "Yellow"],
-    color: "Green"
+    color: "Red"
   },
   {
     name: "New Air Max Flyknit Racer",
     imageUrl: p3,
     price: "52.00",
-    colorOptions: ["Black", "Green", "Yellow"],
-    color: "Black"
+    color:"Blue"
   },
   {
     name: "Air Max 90",
     imageUrl: p4,
     price: "45.00",
-    colorOptions: ["Blue", "Green", "Yellow"],
-    color: "Blue"
+    color: "Pink"
   }
 ];
 

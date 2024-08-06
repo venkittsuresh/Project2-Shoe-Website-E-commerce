@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './component/common/Navbar/Navbar';
 import Home from './pages/common/Home';
 import Footer from './component/common/Footer/Footer';
-import Loader from './pages/common/Loader/Loader';
+import Loader from './component/common/Loader/Loader';
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -22,7 +22,7 @@ const App = () => {
       {loading ? (
         <Loader />
       ) : (
-        
+
         <Router>
           <Navbar />
           <Routes>
