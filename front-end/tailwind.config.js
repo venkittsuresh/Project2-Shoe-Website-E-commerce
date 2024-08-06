@@ -13,6 +13,7 @@ module.exports = {
         'mens-category': "url('/src/assets/images/men1.jpg')",
         'womens-category': "url('/src/assets/images/women.jpg')",
         'kids-category': "url('/src/assets/images/kid1.jpg')",
+        'home-bg':"url('/src/assets/images/bg1.jpg')",
       },
     },
   },

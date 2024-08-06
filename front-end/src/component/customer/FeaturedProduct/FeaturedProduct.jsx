@@ -67,7 +67,7 @@ const settings = {
 
 const FeaturedProduct = () => {
   return (
-    <div className="bg-gray-900 text-white font-sans py-6">
+    <div className=" text-white font-sans py-6">
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold mb-6">Featured Product</h1>
         <div className="flex justify-between mb-4">

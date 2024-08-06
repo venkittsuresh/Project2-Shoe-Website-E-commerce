@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 const ProductCard = ({ product }) => {
-  const [selectedColor, setSelectedColor] = useState(product.color);
   const [isFavorite, setIsFavorite] = useState(false);
 
   const toggleFavorite = () => {
