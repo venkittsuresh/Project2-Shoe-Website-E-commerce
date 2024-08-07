@@ -107,10 +107,10 @@ function Navbar() {
                 <MenuItem key={page.name} onClick={() => handlePageClick(page.path)} className="menu-item">
                   <Link
                     to={page.path}
-                    className={`nav-link ${activePage === page.path ? 'active-link' : ''}`}
+                    className={`nav-link `}
                     onClick={() => handlePageClick(page.path)}
                   >
-                    <Typography textAlign="center">{page.name}</Typography>
+                    <Typography textAlign="center" className='nav-txt'>{page.name}</Typography>
                   </Link>
                 </MenuItem>
               ))}
@@ -165,14 +165,9 @@ function Navbar() {
 
           <Box sx={{ display: 'flex', alignItems: 'center', ml: 2 }}>
             <IconButton color="inherit" className="icon-button">
-              <AccountCircleIcon />
+              <AccountCircleIcon fontSize='large'/>
             </IconButton>
-            <IconButton color="inherit" className="icon-button">
-              <FavoriteIcon />
-            </IconButton>
-            <IconButton color="inherit" className="icon-button">
-              <ShoppingBagIcon />
-            </IconButton>
+
           </Box>
         </Toolbar>
       </Container>
