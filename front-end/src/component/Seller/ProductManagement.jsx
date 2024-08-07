@@ -8,7 +8,7 @@ const ProductManagement = () => {
   return(
     <>
     <Navbar/>
-    <ProductForm/>
+    <h1>Product pages</h1>
     </>
   )
  

@@ -2,6 +2,8 @@
 .addproductcontainer{
     display: flex;
     justify-content: center;
+    background-image: url(../../../../assets/istockphoto-1356775478-1024x1024.jpg);
+    background-size: cover;
   }
   .product-form {
     margin-bottom: 20px;
@@ -37,7 +39,8 @@
     gap: 10px;
   }
   .card {
-    background-color: #fff;
+    background-color: transparent;
+    backdrop-filter:blur(2px);
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 20px;
@@ -165,7 +168,7 @@
 }
 
 .button:after {
-  border: 4px solid #9f9fae;
+  border: 4px solid #ff7a63;
   transform: scale(1.3);
   transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
     transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
