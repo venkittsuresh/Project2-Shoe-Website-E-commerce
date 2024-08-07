@@ -2,7 +2,7 @@ import React from 'react';
 import { AppBar, Toolbar, IconButton, Menu, MenuItem, Typography, Box, Button, Container, Grid, InputBase } from '@mui/material';
 import { Menu as MenuIcon, Search as SearchIcon, AccountCircle as AccountCircleIcon, Favorite as FavoriteIcon, ShoppingBag as ShoppingBagIcon } from '@mui/icons-material';
 import { styled, alpha } from '@mui/material/styles';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import logo from '../../../assets/Logo/WolfPaw.png';
 import './Navbar.css';
 
@@ -12,6 +12,7 @@ const pages = [
   { name: 'ABOUT', path: '/about' },
 
 ];
+
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -55,6 +56,13 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [activePage, setActivePage] = React.useState('/');
+
+  const profile=useNavigate();
+  
+  const handleClickProfile=()=>{
+   profile('/profile')
+  }
+  
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -110,7 +118,7 @@ function Navbar() {
                     className={`nav-link `}
                     onClick={() => handlePageClick(page.path)}
                   >
-                    <Typography textAlign="center" className='nav-txt'>{page.name}</Typography>
+                    <Typography textAlign="center" >{page.name}</Typography>
                   </Link>
                 </MenuItem>
               ))}
@@ -164,7 +172,7 @@ function Navbar() {
           </Search>
 
           <Box sx={{ display: 'flex', alignItems: 'center', ml: 2 }}>
-            <IconButton color="inherit" className="icon-button">
+            <IconButton color="inherit" className="icon-button" onClick={handleClickProfile}>
               <AccountCircleIcon fontSize='large'/>
             </IconButton>
 
