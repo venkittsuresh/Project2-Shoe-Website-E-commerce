@@ -8,11 +8,9 @@ import './Navbar.css';
 
 const pages = [
   { name: 'HOME', path: '/' },
-  { name: 'MEN', path: '/men' },
-  { name: 'WOMEN', path: '/women' },
-  { name: 'KIDS', path: '/kids' },
+  { name: 'PRODUCT', path: '/Product' },
   { name: 'ABOUT', path: '/about' },
-  { name: 'CONTACT', path: '/contact' },
+
 ];
 
 const Search = styled('div')(({ theme }) => ({
